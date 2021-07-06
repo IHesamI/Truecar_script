@@ -12,7 +12,7 @@ conn=requests.get(url,headers=the_header)
 print(conn)
 the_soup=BeautifulSoup(conn.text,'html.parser')
 browse_list=the_soup.find_all('div',attrs={'data-test':'cardContent'})
-sql_connector=connector.connect(user="root" ,password="hesam1379",host="localhost",database="truecar")
+sql_connector=connector.connect(user="user" ,password="123456789",host="localhost",database="truecar")
 cursor_sql_connector=sql_connector.cursor()
 i =1
 cursor_sql_connector.execute("CREATE TABLE %s (model_year VARCHAR(100),type_of_car VARCHAR(100), price_label VARCHAR(100), price VARCHAR(100), milage VARCHAR(100), location  VARCHAR(100), colors VARCHAR(100), condition_of_car  VARCHAR(100)) "%(Table_name))
